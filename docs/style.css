@@ -248,7 +248,8 @@ html,body{overflow-x:hidden;}
 .lesson-book{padding:24px 28px;display:flex;gap:20px;}
 .book-cover{width:96px;height:128px;border-radius:8px;flex-shrink:0;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,.08);}
 .book-meta{display:flex;flex-direction:column;justify-content:center;gap:8px;}
-.grade-badge{background:var(--orange-50);color:var(--orange-600);font-size:14px;font-weight:800;padding:4px 10px;border-radius:6px;width:fit-content;}
+.book-title-row{display:flex;align-items:center;gap:10px;}
+.grade-badge{background:var(--orange-50);color:var(--orange-600);font-size:14px;font-weight:800;padding:4px 10px;border-radius:6px;width:fit-content;flex-shrink:0;}
 .book-title{font-size:23px;font-weight:800;letter-spacing:-.3px;}
 .book-unit{font-size:16.5px;color:var(--ink-700);font-weight:700;}
 .book-lesson{font-size:15.5px;color:var(--ink-500);}
@@ -259,14 +260,17 @@ html,body{overflow-x:hidden;}
 .elements-list li{display:flex;align-items:center;gap:7px;font-size:15.5px;font-weight:600;color:var(--ink-700);}
 .elements-list .svg-ico{color:var(--blue-500);font-size:17px;}
 
-.section-lead{margin-top:26px;font-size:20px;font-weight:800;letter-spacing:-.2px;}
+.section-lead{font-size:20px;font-weight:800;letter-spacing:-.2px;}
 
 /* ============ LESSON PLAN BIG PANEL ============ */
-.plan-grid{display:grid;grid-template-columns:1fr 360px;gap:0;border:1.5px solid var(--blue-100);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);margin-top:14px;}
-.plan-left{padding:24px 26px;background:var(--white);}
+.plan-card{margin-top:26px;border:1.5px solid var(--blue-100);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--white);}
+.plan-card-head{padding:22px 26px 6px;}
+.plan-grid{display:grid;grid-template-columns:1fr 360px;gap:0;}
+.plan-left{padding:18px 26px 24px;background:var(--white);}
 .plan-right{padding:24px 24px;background:var(--blue-50);border-left:1.5px solid var(--blue-100);}
 .plan-left .res-grid{grid-template-columns:repeat(4,1fr);}
 
+.run-box{background:var(--white);border:1px solid var(--ink-200);border-radius:var(--r-md);padding:18px 20px;}
 .run-title{font-size:19px;font-weight:800;}
 .run-q{margin-top:14px;font-size:17px;font-weight:700;line-height:1.5;}
 .btn-start{margin-top:12px;width:100%;padding:13px;border-radius:var(--r-sm);background:var(--orange-500);color:#fff;font-size:17.5px;font-weight:800;}

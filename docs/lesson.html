@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>YBM 교사지원 사이트 · 수학3-1 (로그인 후)</title>
+<title>YBM 교사지원 사이트 · 수학6-2 (로그인 후)</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
     <div class="nav-right">
       <a href="#">공지사항</a><span class="nav-sep">|</span>
       <a href="#">고객지원</a><span class="nav-sep">|</span>
-      <span class="nav-user"><span class="nav-avatar">김</span>000선생님 마이 페이지</span>
+      <span class="nav-user"><span class="nav-avatar">Y</span>YBM선생님 마이페이지</span>
       <span class="nav-sep">|</span>
       <a href="index.html">로그아웃</a>
     </div>
@@ -31,14 +31,16 @@
     <div class="panel lesson-book">
       <img class="book-cover" src="assets/book-cover-math6-1.png" alt="초등학교 수학 6-1 교과서 표지" />
       <div class="book-meta">
-        <span class="grade-badge">초등</span>
-        <div class="book-title">수학3-1 (류희찬 외)</div>
-        <div class="book-unit">6단원 분수와 소수</div>
-        <div class="book-lesson">[7차시] 6. 분모가 같은 분수의 크기를 비교해요 (134~135p)</div>
+        <div class="book-title-row">
+          <span class="grade-badge">초등</span>
+          <div class="book-title">수학 6-2 (류희찬 외)</div>
+        </div>
+        <div class="book-unit">2단원 공간과 입체</div>
+        <div class="book-lesson">[6차시] 5. 위에서 본 모양에 수를 써서 쌓기나무의 개수를 알아봐요 (44~45p)</div>
       </div>
     </div>
     <div class="panel elements-panel">
-      <div class="elements-title">기본 수업요소</div>
+      <div class="elements-title">수업 툴</div>
       <ul class="elements-list">
         <li><svg class="svg-ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>발문</li>
         <li><svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.5l6.4-.6z"/></svg>수업활동</li>
@@ -50,10 +52,12 @@
     </div>
   </section>
 
-  <h2 class="section-lead">이번 차시 추천 수업안을 확인해보세요.</h2>
-
   <!-- PLAN + RUN -->
-  <section class="plan-grid">
+  <section class="plan-card">
+    <div class="plan-card-head">
+      <h2 class="section-lead">이번 차시 추천 수업안을 확인해 보세요.</h2>
+    </div>
+    <div class="plan-grid">
     <div class="plan-left">
       <div class="preview-head">
         <div class="head-row">
@@ -146,17 +150,19 @@
     </div>
 
     <div class="plan-right">
-      <div class="run-title">수업 진행하기</div>
-      <p class="run-q">40분 수업으로<br>진행 하시겠습니까?</p>
-      <button class="btn-start">수업 시작하기</button>
-      <p class="run-note">※ 선택한 수업시간에 맞춰 수업안의 차트 조정됩니다.<br>안정된 수업진행을 지원해드립니다.</p>
+      <div class="run-box">
+        <div class="run-title">수업 진행하기</div>
+        <p class="run-q">40분 수업으로<br>진행 하시겠습니까?</p>
+        <button class="btn-start">수업 시작하기</button>
+        <p class="run-note">※ 선택한 수업시간에 맞춰 수업안의 차트 조정됩니다.<br>안정된 수업진행을 지원해드립니다.</p>
 
-      <div class="time-chips">
-        <button class="time-chip active">30분</button>
-        <button class="time-chip">35분</button>
-        <button class="time-chip">40분</button>
-        <button class="time-chip">45분</button>
-        <button class="time-chip">직접 설정</button>
+        <div class="time-chips">
+          <button class="time-chip active">30분</button>
+          <button class="time-chip">35분</button>
+          <button class="time-chip">40분</button>
+          <button class="time-chip">45분</button>
+          <button class="time-chip">직접 설정</button>
+        </div>
       </div>
 
       <div class="point-title">
@@ -170,6 +176,7 @@
         <svg class="svg-ico" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 2z"/></svg>
         <span class="bar"></span>
       </div>
+    </div>
     </div>
   </section>
 
