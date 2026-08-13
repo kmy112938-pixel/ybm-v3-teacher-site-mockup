@@ -45,7 +45,8 @@ html,body{overflow-x:hidden;}
 /* ============ NAV ============ */
 .nav{background:var(--white);border-bottom:1px solid var(--ink-200);}
 .nav-inner{max-width:1440px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;gap:36px;}
-.logo{font-size:25px;font-weight:800;color:var(--blue-600);letter-spacing:-.5px;}
+.logo-link{display:flex;align-items:center;flex-shrink:0;}
+.logo{height:26px;width:auto;display:block;}
 .nav-menu{display:flex;align-items:center;gap:22px;font-size:17px;font-weight:600;color:var(--ink-700);}
 .nav-menu a:hover{color:var(--blue-600);}
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:16px;color:var(--ink-500);font-weight:500;}

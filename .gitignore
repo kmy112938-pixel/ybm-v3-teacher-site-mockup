@@ -1,2 +1,10 @@
 .claude/
 node_modules/
+
+# mathvideo_kit
+mathvideo_kit/__pycache__/
+mathvideo_kit/pipeline/__pycache__/
+mathvideo_kit/input/*
+!mathvideo_kit/input/.gitkeep
+mathvideo_kit/output/*
+!mathvideo_kit/output/.gitkeep
