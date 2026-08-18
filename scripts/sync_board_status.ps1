@@ -1,11 +1,12 @@
 ﻿# Y클라우드 게시판 현황판 자동 동기화
-# OneDrive 원본 엑셀을 읽어 docs/board-status.html을 재생성하고, 변경이 있으면 GitHub에 자동 push한다.
+# 구글 시트(팀원 공유 편집본)를 읽어 docs/board-status.html을 재생성하고, 변경이 있으면 GitHub에 자동 push한다.
 # Windows 작업 스케줄러가 30분마다 이 스크립트를 실행한다.
 
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = "C:\Users\YBM\project"
-$SourceXlsx = "C:\Users\YBM\OneDrive - YBM, Inc\01_실무\게시판운영 현황\Y클라우드_게시판 현황_원본데이터.xlsx"
+$SheetId = "1aF5gnTNRObLexo_QvDfOWHE1YzSCNCVY"
+$SourceUrl = "https://docs.google.com/spreadsheets/d/$SheetId/export?format=xlsx"
 $TempCopy = "$env:TEMP\ybm_board_status_sync.xlsx"
 $LogFile = Join-Path $RepoRoot "scripts\sync.log"
 
@@ -15,12 +16,12 @@ function Write-Log($msg) {
 }
 
 try {
-    # 1. OneDrive 클라우드 파일을 로컬로 강제 다운로드(hydrate)하며 복사
-    Copy-Item -Path $SourceXlsx -Destination $TempCopy -Force
+    # 1. 구글 시트(공유 링크)를 xlsx로 내려받기
+    Invoke-WebRequest -Uri $SourceUrl -OutFile $TempCopy -UseBasicParsing
 
     # 2. HTML 재생성
     Set-Location $RepoRoot
-    $result = & python scripts\generate_board_status.py $TempCopy
+    $result = & python scripts\generate_board_status.py $TempCopy docs\board-status.html "Y클라우드_게시판 현황_원본데이터 (팀 공유 구글시트)"
     if ($LASTEXITCODE -ne 0) {
         throw "generate_board_status.py 실패 (exit $LASTEXITCODE): $result"
     }

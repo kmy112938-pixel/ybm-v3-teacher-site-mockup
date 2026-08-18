@@ -77,12 +77,12 @@ def build_data(xlsx_path):
     return [items[i] for i in order]
 
 
-def render(xlsx_path, output_path):
+def render(xlsx_path, output_path, source_label=None):
     data = build_data(xlsx_path)
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     meta = {
         "generated_at": f"{now} (KST)",
-        "source_name": Path(xlsx_path).name,
+        "source_name": source_label or Path(xlsx_path).name,
     }
 
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
@@ -107,9 +107,10 @@ def render(xlsx_path, output_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("usage: generate_board_status.py <xlsx_path> [output_path]", file=sys.stderr)
+        print("usage: generate_board_status.py <xlsx_path> [output_path] [source_label]", file=sys.stderr)
         sys.exit(1)
     xlsx_arg = sys.argv[1]
     out_arg = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_OUTPUT
-    changed = render(xlsx_arg, out_arg)
+    label_arg = sys.argv[3] if len(sys.argv) > 3 else None
+    changed = render(xlsx_arg, out_arg, label_arg)
     print("CHANGED" if changed else "NOCHANGE")
