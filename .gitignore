@@ -1,6 +1,9 @@
 .claude/
 node_modules/
 
+# board-status 자동 동기화 로그
+scripts/sync.log
+
 # mathvideo_kit
 mathvideo_kit/__pycache__/
 mathvideo_kit/pipeline/__pycache__/
