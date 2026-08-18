@@ -1,6 +1,6 @@
-﻿# Y클라우드 게시판 현황판 자동 동기화
-# 구글 시트(팀원 공유 편집본)를 읽어 docs/board-status.html을 재생성하고, 변경이 있으면 GitHub에 자동 push한다.
-# Windows 작업 스케줄러가 30분마다 이 스크립트를 실행한다.
+﻿# Y클라우드 게시판 현황판 수동 동기화 (로컬 테스트/디버깅용)
+# 정기 자동 동기화는 .github/workflows/sync-board-status.yml (GitHub Actions, 30분마다)이 담당한다.
+# 이 스크립트는 PC와 무관하게 결과를 바로 확인하고 싶을 때 수동으로 실행하는 용도로만 남겨둔다.
 
 $ErrorActionPreference = "Stop"
 
