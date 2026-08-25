@@ -1,5 +1,6 @@
 .claude/
 node_modules/
+ybm-board-status/
 
 # mathvideo_kit
 mathvideo_kit/__pycache__/
