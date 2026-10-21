@@ -121,7 +121,7 @@ html,body{overflow-x:hidden;}
 .head-row{display:flex;align-items:center;width:100%;gap:12px;}
 
 .summary-row{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.summary-box,.flow-box{border:1px solid var(--ink-200);border-radius:var(--r-md);padding:16px 18px;}
+.summary-box,.flow-box{border:1px solid var(--ink-200);border-radius:var(--r-md);padding:16px 18px;background:var(--white);}
 .sum-item{display:flex;align-items:flex-start;flex-wrap:wrap;gap:6px 8px;font-size:15.5px;font-weight:700;color:var(--ink-700);}
 .sum-item .svg-ico{color:var(--blue-500);font-size:18px;}
 .sum-item + .sum-item{margin-top:14px;}
@@ -264,11 +264,11 @@ html,body{overflow-x:hidden;}
 .section-lead{font-size:20px;font-weight:800;letter-spacing:-.2px;}
 
 /* ============ LESSON PLAN BIG PANEL ============ */
-.plan-card{margin-top:26px;border:1.5px solid var(--blue-100);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--white);}
+.plan-card{margin-top:26px;border:1.5px solid #C7D7FF;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--blue-100);}
 .plan-card-head{padding:22px 26px 6px;}
 .plan-grid{display:grid;grid-template-columns:1fr 360px;gap:0;}
-.plan-left{padding:18px 26px 24px;background:var(--white);}
-.plan-right{padding:24px 24px;background:var(--white);border-left:1.5px solid var(--blue-100);}
+.plan-left{padding:18px 26px 24px;background:var(--blue-100);}
+.plan-right{padding:24px 24px;background:var(--blue-100);border-left:1.5px solid #C7D7FF;}
 .plan-left .res-grid{grid-template-columns:repeat(4,1fr);}
 
 .run-box{background:var(--white);border:1px solid var(--ink-200);border-radius:var(--r-md);padding:18px 20px;}
@@ -284,7 +284,7 @@ html,body{overflow-x:hidden;}
 .point-title .svg-ico{color:var(--blue-500);}
 .point-item{margin-top:10px;display:flex;align-items:center;gap:8px;}
 .point-check{width:18px;height:18px;border-radius:50%;background:var(--blue-600);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
-.tip-row{margin-top:18px;display:flex;align-items:center;gap:8px;padding:12px 14px;background:var(--white);border-radius:var(--r-sm);border:1px solid var(--ink-200);}
+.tip-row{margin-top:18px;display:flex;align-items:center;gap:8px;}
 .tip-row .svg-ico{color:var(--orange-500);font-size:19px;}
 
 /* recommended prompts */
@@ -314,7 +314,7 @@ html,body{overflow-x:hidden;}
   .nav-menu{order:3;flex-basis:100%;gap:16px;}
   .nav-right{gap:10px;}
   .hero,.result-grid,.lesson-head,.plan-grid{grid-template-columns:1fr;}
-  .plan-right{border-left:none;border-top:1.5px solid var(--blue-100);}
+  .plan-right{border-left:none;border-top:1.5px solid #C7D7FF;}
   .res-grid{grid-template-columns:repeat(2,1fr)!important;}
   .iconnav{grid-template-columns:1fr;gap:22px;}
   .iconnav-col{border-left:none!important;padding:0;}
