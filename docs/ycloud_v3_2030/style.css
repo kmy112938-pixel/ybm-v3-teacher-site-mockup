@@ -841,3 +841,13 @@ body.cast{justify-content:center;align-items:center;padding:2vh 2vw;background:#
 .rm-preview-box iframe{position:absolute;left:0;top:0;width:1280px;height:720px;border:0;transform:scale(.189);transform-origin:0 0;pointer-events:none;}
 .rm-preview p{margin-top:8px;font-size:12.5px;line-height:1.5;color:#C9CDDA;}
 @media (max-width:760px){ .rm-preview{display:none;} }
+
+/* ============ 반복 요소 정리 ============ */
+.lesson-head.solo,.result-grid.solo{grid-template-columns:1fr;}
+.ai-edit{padding:22px 24px;}
+.ai-edit-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.ai-edit-head h2{font-size:20px;font-weight:800;}
+.ai-edit-head p{font-size:14.5px;color:var(--ink-500);}
+.ai-edit-bar{margin-top:14px;border:1.5px solid var(--ink-200);box-shadow:none;}
+.ai-edit-chips{margin-top:12px;}
+.ai-edit-chips .chip{font-size:14.5px;padding:7px 14px;}
