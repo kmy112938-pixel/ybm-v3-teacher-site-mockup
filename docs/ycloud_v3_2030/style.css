@@ -824,3 +824,20 @@ body:has(#ppt:target) .t-ppt,body:not(:has(.pane:target)) .t-ppt,body:has(#ebook
   .rm-side{display:flex;}
   .rm-tools button{min-width:44px;}
 }
+
+/* ============ 학생 화면 (student.html) · 송출 ============ */
+body.cast{justify-content:center;align-items:center;padding:2vh 2vw;background:#0B0C10;}
+.cast-main{width:min(100%, calc(96vh * 16 / 9));}
+.cast .slide{border-radius:12px;}
+.rm-cast{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;padding:5px 12px 5px 34px;position:relative;border-radius:10px;background:#1E3A2B;color:#7FE0AE;font-size:13px;font-weight:800;}
+.rm-cast .svg-ico{position:absolute;left:10px;top:50%;margin-top:-9px;font-size:18px;}
+.rm-cast span{display:inline-flex;align-items:center;gap:6px;}
+.rm-cast span i{width:7px;height:7px;border-radius:50%;background:#5FD39A;box-shadow:0 0 0 3px rgba(95,211,154,.25);}
+.rm-cast small{font-size:11.5px;font-weight:700;color:#A7D9BF;}
+.rm-cast:hover{background:#244834;}
+.rm-preview{padding:12px;border-radius:12px;background:#262A38;}
+.rm-preview small{font-size:12px;font-weight:700;color:#9AA1B4;}
+.rm-preview-box{margin-top:8px;position:relative;width:242px;max-width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#0B0C10;}
+.rm-preview-box iframe{position:absolute;left:0;top:0;width:1280px;height:720px;border:0;transform:scale(.189);transform-origin:0 0;pointer-events:none;}
+.rm-preview p{margin-top:8px;font-size:12.5px;line-height:1.5;color:#C9CDDA;}
+@media (max-width:760px){ .rm-preview{display:none;} }

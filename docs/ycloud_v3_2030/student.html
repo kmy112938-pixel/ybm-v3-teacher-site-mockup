@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>학생 화면 · 수학 6-2 2단원 6차시</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="room cast">
+
+<!-- 학생 화면: 학습창만. 쪽 목록·수업 도우미·메모·남은 시간은 선생님 화면에만 보인다. -->
+<main class="cast-main">
+    <div class="rm-stage">
+      <!-- ① 수업용 PPT 6쪽 + 교사 판서 -->
+      <section class="pane" id="ppt" aria-label="수업용 PPT 6쪽">
+        <div class="slide">
+          <div class="sl-head"><span class="sl-tag">전개</span><h2>위에서 본 모양에 수를 써 볼까요?</h2></div>
+          <div class="sl-body">
+            <div class="sl-fig"><svg class="iso" viewBox="0 0 204 296" role="img" aria-label="쌓기나무로 쌓은 모양"><g stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><polygon points="102,148.0 148,171.0 102,194.0 56,171.0" fill="#7FA6FF"/><polygon points="56,171.0 102,194.0 102,240.0 56,217.0" fill="#3B6EF0"/><polygon points="148,171.0 102,194.0 102,240.0 148,217.0" fill="#2448B8"/><polygon points="102,102.0 148,125.0 102,148.0 56,125.0" fill="#7FA6FF"/><polygon points="56,125.0 102,148.0 102,194.0 56,171.0" fill="#3B6EF0"/><polygon points="148,125.0 102,148.0 102,194.0 148,171.0" fill="#2448B8"/><polygon points="102,56.0 148,79.0 102,102.0 56,79.0" fill="#7FA6FF"/><polygon points="56,79.0 102,102.0 102,148.0 56,125.0" fill="#3B6EF0"/><polygon points="148,79.0 102,102.0 102,148.0 148,125.0" fill="#2448B8"/><polygon points="148,171.0 194,194.0 148,217.0 102,194.0" fill="#7FA6FF"/><polygon points="102,194.0 148,217.0 148,263.0 102,240.0" fill="#3B6EF0"/><polygon points="194,194.0 148,217.0 148,263.0 194,240.0" fill="#2448B8"/><polygon points="56,171.0 102,194.0 56,217.0 10,194.0" fill="#7FA6FF"/><polygon points="10,194.0 56,217.0 56,263.0 10,240.0" fill="#3B6EF0"/><polygon points="102,194.0 56,217.0 56,263.0 102,240.0" fill="#2448B8"/><polygon points="56,125.0 102,148.0 56,171.0 10,148.0" fill="#7FA6FF"/><polygon points="10,148.0 56,171.0 56,217.0 10,194.0" fill="#3B6EF0"/><polygon points="102,148.0 56,171.0 56,217.0 102,194.0" fill="#2448B8"/></g></svg><p>쌓기나무로 쌓은 모양</p></div>
+            <div class="sl-arrow">→</div>
+            <div class="sl-fig"><div class="tg" style="grid-template-columns:repeat(2,1fr)"><span class="tg-c">3</span><span class="tg-c">1</span><span class="tg-c">2</span><span class="tg-c empty"></span></div><p>위에서 본 모양</p></div>
+          </div>
+          <div class="sl-q">각 칸에 쓴 수는 그 자리에 쌓인 <b>층수</b>예요. 쌓기나무는 모두 몇 개일까요?</div>
+          <!-- 교사 판서 레이어 -->
+          <svg class="ink" viewBox="0 0 1000 562" aria-hidden="true">
+            <path d="M590 205c25-45 140-50 165-5 25 50 5 120-60 130-75 12-130-30-115-90 4-14 8-24 14-32" fill="none" stroke="#E2456B" stroke-width="5" stroke-linecap="round"/>
+            <text x="745" y="285" fill="#E2456B" font-size="60" font-family="'Nanum Pen Script',cursive">3+1+2 = 6개</text>
+            <path d="M751 302c50 6 120 6 175-4" fill="none" stroke="#E2456B" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          </svg>
+          <span class="sl-page">6 / 12</span>
+        </div>
+      </section>
+
+      <!-- ② 전자저작물: 교과서 44쪽 -->
+      <section class="pane" id="ebook" aria-label="전자저작물 교과서 44쪽">
+        <div class="slide book">
+          <div class="bk-page">
+            <div class="bk-run">2. 공간과 입체 <span>44</span></div>
+            <h2><span class="bk-no">5</span>위에서 본 모양에 수를 써서 쌓기나무의 개수를 알아봐요</h2>
+            <div class="bk-act">
+              <span class="bk-label">활동 1</span>
+              <p>쌓기나무로 쌓은 모양을 보고, 위에서 본 모양의 각 칸에 쌓인 쌓기나무의 수를 써 보세요.</p>
+              <div class="bk-row">
+                <div class="bk-fig"><svg class="iso" viewBox="0 0 140 200" role="img" aria-label="쌓기나무로 쌓은 모양"><g stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><polygon points="70,100.0 100,115.0 70,130.0 40,115.0" fill="#7FA6FF"/><polygon points="40,115.0 70,130.0 70,160.0 40,145.0" fill="#3B6EF0"/><polygon points="100,115.0 70,130.0 70,160.0 100,145.0" fill="#2448B8"/><polygon points="70,70.0 100,85.0 70,100.0 40,85.0" fill="#7FA6FF"/><polygon points="40,85.0 70,100.0 70,130.0 40,115.0" fill="#3B6EF0"/><polygon points="100,85.0 70,100.0 70,130.0 100,115.0" fill="#2448B8"/><polygon points="70,40.0 100,55.0 70,70.0 40,55.0" fill="#7FA6FF"/><polygon points="40,55.0 70,70.0 70,100.0 40,85.0" fill="#3B6EF0"/><polygon points="100,55.0 70,70.0 70,100.0 100,85.0" fill="#2448B8"/><polygon points="100,115.0 130,130.0 100,145.0 70,130.0" fill="#7FA6FF"/><polygon points="70,130.0 100,145.0 100,175.0 70,160.0" fill="#3B6EF0"/><polygon points="130,130.0 100,145.0 100,175.0 130,160.0" fill="#2448B8"/><polygon points="40,115.0 70,130.0 40,145.0 10,130.0" fill="#7FA6FF"/><polygon points="10,130.0 40,145.0 40,175.0 10,160.0" fill="#3B6EF0"/><polygon points="70,130.0 40,145.0 40,175.0 70,160.0" fill="#2448B8"/><polygon points="40,85.0 70,100.0 40,115.0 10,100.0" fill="#7FA6FF"/><polygon points="10,100.0 40,115.0 40,145.0 10,130.0" fill="#3B6EF0"/><polygon points="70,100.0 40,115.0 40,145.0 70,130.0" fill="#2448B8"/></g></svg></div>
+                <div class="bk-fig"><div class="tg" style="grid-template-columns:repeat(2,1fr)"><span class="tg-c"></span><span class="tg-c"></span><span class="tg-c"></span><span class="tg-c empty"></span></div></div>
+              </div>
+            </div>
+            <div class="bk-act">
+              <span class="bk-label">활동 2</span>
+              <p>위에서 본 모양에 쓴 수를 이용하여 쌓기나무의 개수를 구해 보세요.</p>
+              <div class="bk-blank">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)개</div>
+            </div>
+          </div>
+          <div class="bk-tools">
+            <button><svg class="svg-ico" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>정답 보기</button><button><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9a4 4 0 010 6"/></svg>읽어 주기</button><button><svg class="svg-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8v6M8 11h6"/></svg>확대</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ③ 디지털 교구관: 쌓기나무 돌려 보기 -->
+      <section class="pane" id="tool" aria-label="디지털 교구관 쌓기나무">
+        <div class="slide tool">
+          <div class="tl-view"><svg class="iso iso-tool" viewBox="0 0 260 380" role="img" aria-label="쌓기나무로 쌓은 모양"><g stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><polygon points="130,190.0 190,220.0 130,250.0 70,220.0" fill="#7FA6FF"/><polygon points="70,220.0 130,250.0 130,310.0 70,280.0" fill="#3B6EF0"/><polygon points="190,220.0 130,250.0 130,310.0 190,280.0" fill="#2448B8"/><polygon points="130,130.0 190,160.0 130,190.0 70,160.0" fill="#7FA6FF"/><polygon points="70,160.0 130,190.0 130,250.0 70,220.0" fill="#3B6EF0"/><polygon points="190,160.0 130,190.0 130,250.0 190,220.0" fill="#2448B8"/><polygon points="130,70.0 190,100.0 130,130.0 70,100.0" fill="#7FA6FF"/><polygon points="70,100.0 130,130.0 130,190.0 70,160.0" fill="#3B6EF0"/><polygon points="190,100.0 130,130.0 130,190.0 190,160.0" fill="#2448B8"/><polygon points="190,220.0 250,250.0 190,280.0 130,250.0" fill="#7FA6FF"/><polygon points="130,250.0 190,280.0 190,340.0 130,310.0" fill="#3B6EF0"/><polygon points="250,250.0 190,280.0 190,340.0 250,310.0" fill="#2448B8"/><polygon points="70,220.0 130,250.0 70,280.0 10,250.0" fill="#7FA6FF"/><polygon points="10,250.0 70,280.0 70,340.0 10,310.0" fill="#3B6EF0"/><polygon points="130,250.0 70,280.0 70,340.0 130,310.0" fill="#2448B8"/><polygon points="70,160.0 130,190.0 70,220.0 10,190.0" fill="#7FA6FF"/><polygon points="10,190.0 70,220.0 70,280.0 10,250.0" fill="#3B6EF0"/><polygon points="130,190.0 70,220.0 70,280.0 130,250.0" fill="#2448B8"/></g></svg></div>
+          <div class="tl-side">
+            <b>쌓기나무 돌려 보기</b>
+            <p>화면을 돌려 뒤에 가려진 쌓기나무를 확인해요.</p>
+            <div class="tl-btns"><button class="on">위</button><button>앞</button><button>옆</button><button><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4"/></svg>돌리기</button></div>
+            <div class="tl-count">지금 놓인 쌓기나무 <b>6개</b></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+</main>
+
+</body>
+</html>
