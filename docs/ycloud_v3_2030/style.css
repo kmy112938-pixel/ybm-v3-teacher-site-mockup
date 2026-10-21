@@ -606,3 +606,61 @@ a.my-cont:hover b{color:var(--blue-600);}
   .bs-report{margin-left:0;}
   .rp-flow ol{grid-template-columns:1fr 1fr;}
 }
+
+/* ============ 수업 실행 (run.html) ============ */
+.ru-flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.ru-ph{padding:14px 14px 12px;border-radius:var(--r-md);border:1px solid var(--ink-200);background:var(--white);display:flex;flex-direction:column;gap:6px;}
+.ru-ph.done{background:var(--ink-100);border-color:var(--ink-100);}
+.ru-ph.done b,.ru-ph.done p{color:var(--ink-500);}
+.ru-ph.now{border:2px solid var(--blue-600);background:var(--blue-50);}
+.ru-ph-top{display:flex;align-items:center;gap:6px;}
+.ru-ph-top b{font-size:16px;font-weight:800;}
+.ru-ph-top small{font-size:13px;font-weight:700;color:var(--ink-500);}
+.ru-st{margin-left:auto;padding:3px 9px;border-radius:999px;background:var(--ink-100);color:var(--ink-500);font-size:12px;font-weight:800;white-space:nowrap;}
+.ru-st.done{background:#E6F6EE;color:#14804A;}
+.ru-st.now{background:var(--blue-600);color:#fff;}
+.ru-ph p{font-size:13.5px;line-height:1.45;color:var(--ink-700);}
+.ru-mats{margin-top:auto;display:flex;flex-wrap:wrap;gap:4px;}
+.ru-mat{padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:800;background:#E6F6EE;color:#14804A;}
+.ru-mat.ai{background:var(--orange-50);color:var(--orange-600);}
+.ru-mat.special{background:#F1EAFE;color:#6A3FC8;}
+.ru-mat.tool{background:var(--ink-100);color:var(--ink-700);}
+.src-badge.tool{background:var(--ink-100);color:var(--ink-700);}
+.ru-now{margin-top:16px;}
+.ru-now-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.ru-now-head .ru-st{margin-left:0;font-size:13px;padding:4px 11px;}
+.ru-now-head h3{font-size:19px;font-weight:800;letter-spacing:-.3px;}
+.ru-use{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.ru-tile{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:14px;border:1px solid var(--ink-200);border-radius:var(--r-md);}
+.ru-tile:hover{border-color:var(--blue-500);}
+.ru-tile.special:hover{border-color:#B9A3EE;}
+.ru-tile-ic{width:38px;height:38px;border-radius:10px;background:var(--blue-50);color:var(--blue-600);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:6px;}
+.ru-tile.special .ru-tile-ic{background:#F1EAFE;color:#6A3FC8;}
+.ru-tile b{font-size:15.5px;font-weight:800;}
+.ru-tile small{font-size:13px;color:var(--ink-500);font-weight:600;margin-bottom:6px;}
+.ru-ask{margin-top:16px;}
+.ru-ask .box-title .svg-ico{color:var(--blue-600);}
+.ru-chips{margin-top:0;}
+.ru-chips .chip{font-size:14px;padding:6px 13px;}
+.ru-answer{margin-top:14px;padding:14px 16px;border-radius:var(--r-md);background:var(--ink-100);}
+.ru-q{font-size:14px;font-weight:700;color:var(--ink-500);}
+.ru-a{margin-top:10px;padding:14px 16px;border-radius:var(--r-sm);background:var(--white);font-size:15.5px;line-height:1.6;color:var(--ink-900);}
+.ru-a b{color:var(--blue-600);}
+.ru-ex{margin-top:6px;font-size:14.5px;font-weight:700;color:var(--ink-700);}
+.ru-src{margin-top:10px;display:flex;align-items:center;gap:6px;font-size:12.5px;}
+.ru-timer{text-align:left;}
+.ru-clock{margin-top:6px;font-size:52px;font-weight:800;letter-spacing:-1px;line-height:1.05;font-variant-numeric:tabular-nums;color:var(--ink-900);}
+.ru-clock-sub{margin-top:4px;font-size:14px;font-weight:600;color:var(--ink-500);}
+.ru-bar{display:block;margin-top:12px;height:8px;border-radius:4px;background:var(--ink-100);overflow:hidden;}
+.ru-bar i{display:block;height:100%;border-radius:0 4px 4px 0;background:var(--blue-600);}
+.ru-tools,.ru-memo{margin-top:16px;}
+.ru-tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.ru-tool-grid a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 4px;border-radius:var(--r-sm);background:var(--ink-100);font-size:20px;color:var(--ink-700);}
+.ru-tool-grid a:hover{background:var(--blue-50);color:var(--blue-600);}
+.ru-tool-grid span{font-size:12.5px;font-weight:700;white-space:nowrap;}
+.next-link .svg-ico{margin-right:6px;}
+@media (max-width:1220px){ .ru-flow{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){
+  .ru-flow,.ru-use{grid-template-columns:1fr;}
+  .ru-clock{font-size:44px;}
+}
