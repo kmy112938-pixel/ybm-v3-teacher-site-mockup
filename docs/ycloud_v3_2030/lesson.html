@@ -77,6 +77,25 @@
   </nav>
 
   <!-- PLAN + RUN -->
+  <!-- 신뢰: 차시 기본세트 완결 표시 -->
+  <section class="panel basic-set">
+    <div class="bs-head">
+      <span class="bs-badge"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>기본세트 5/5</span>
+      <div class="bs-txt">
+        <b>이번 차시 기본자료가 빠짐없이 준비돼 있어요.</b>
+        <small>모두 YBM 공식 자료 · 마지막 점검 10월 18일</small>
+      </div>
+      <a class="bs-report" href="#report"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>오류·누락 신고</a>
+    </div>
+    <ul class="bs-items">
+        <li><span class="bs-ok"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><b>교과서</b><small>44~45p</small></li>
+        <li><span class="bs-ok"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><b>지도서</b><small>6차시</small></li>
+        <li><span class="bs-ok"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><b>수업용 PPT</b><small>12쪽</small><em>10/18 수정</em></li>
+        <li><span class="bs-ok"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><b>학생 활동지</b><small>HWPX</small></li>
+        <li><span class="bs-ok"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><b>형성평가</b><small>5문항</small></li>
+    </ul>
+  </section>
+
   <section class="plan-card">
     <div class="plan-card-head">
       <h2 class="section-lead">이번 차시 추천 수업안을 확인해 보세요.</h2>
@@ -134,7 +153,7 @@
       <div class="res-grid">
         <div class="res-card">
           <div class="res-label">수업용 PPT<span class="file-tag pptx">PPTX</span></div>
-          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span><span class="src-upd">10/18 수정</span></div>
           <div class="res-thumb ppt-thumb">
             <div class="ppt-title">쌓기 도형의<br>모양과 개수</div>
             <div class="ppt-tag">초등 6학년 수학</div>
@@ -226,6 +245,37 @@
     </div>
   </section>
 
+  <!-- 신뢰: 오류·누락 신고 (#report 로 열림) -->
+  <div class="modal" id="report" role="dialog" aria-labelledby="report-title">
+    <a class="modal-dim" href="#" aria-label="닫기"></a>
+    <div class="modal-box">
+      <div class="modal-head"><h2 id="report-title">오류·누락 신고</h2><a class="modal-x" href="#" aria-label="닫기">×</a></div>
+      <div class="rp-field">
+        <label>어떤 자료인가요?</label>
+        <div class="rp-select">수업용 PPT · 수학 6-2 2단원 6차시 ▾</div>
+      </div>
+      <div class="rp-field">
+        <label>어떤 문제인가요?</label>
+        <div class="chip-row"><button class="chip on">내용 오류</button><button class="chip">오탈자</button><button class="chip">링크·재생 안 됨</button><button class="chip">자료 누락</button><button class="chip">기타</button></div>
+      </div>
+      <div class="rp-field">
+        <label>위치와 내용</label>
+        <div class="rp-text">7쪽 · 위에서 본 모양 그림의 숫자가 교과서 44쪽과 달라요.</div>
+        <div class="rp-attach">+ 화면 캡처 첨부</div>
+      </div>
+      <div class="rp-flow">
+        <div class="rp-flow-title">신고 후 이렇게 처리돼요</div>
+        <ol>
+          <li><span>1</span><b>접수</b><small>바로</small></li>
+          <li><span>2</span><b>담당 편집자 확인</b><small>1일 안</small></li>
+          <li><span>3</span><b>수정 반영</b><small>평균 2일</small></li>
+          <li><span>4</span><b>결과 알림</b><small>내 홈 · 메일</small></li>
+        </ol>
+      </div>
+      <div class="modal-btns"><a class="rc-btn" href="#">취소</a><a class="rc-btn fill" href="#">신고하기</a></div>
+    </div>
+  </div>
+
   <!-- SEARCH AGAIN -->
   <section class="section">
     <div class="panel" style="padding:14px 18px;">
@@ -247,7 +297,7 @@
       <div class="res-grid" style="grid-template-columns:repeat(3,1fr);">
         <div class="res-card">
           <div class="res-label">수업용 PPT<span class="file-tag pptx">PPTX</span></div>
-          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span><span class="src-upd">10/18 수정</span></div>
           <div class="res-thumb ppt-thumb">
             <div class="ppt-title">쌓기 도형의<br>모양과 개수</div>
             <div class="ppt-tag">초등 6학년 수학</div>
