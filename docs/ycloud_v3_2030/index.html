@@ -29,7 +29,7 @@
     <div class="panel hero-main">
       <div class="hero-decor"></div>
       <h1>어떤 <em>수업</em>을<br>준비하고 싶으신가요?</h1>
-      <p class="hero-sub">교과서를 기반으로 AI가 수업 자료를 준비해 드립니다.</p>
+      <p class="hero-sub">YBM 교과서·차시에서 출발해 수업 준비부터 평가·기록까지 한 흐름으로 이어 드립니다.</p>
       <div class="search-bar">
         <svg class="svg-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
         <input type="text" value="초등학교 6학년 2학기 공간과 입체 단원 수업 준비중인데, 위에서 본 쌓기나무 개수를 알아보는 수업을 준비해줘" readonly />
@@ -38,11 +38,18 @@
         </button>
       </div>
       <div class="chip-row">
-        <button class="chip">2학년 쌓기나무 복습</button>
-        <button class="chip">보이지 않는 쌓기나무</button>
-        <button class="chip">자리별 층수</button>
-        <button class="chip">공간 지각력</button>
-        <button class="chip">실생활 연계 예</button>
+        <span class="chip-label">조건을 더해 보세요</span>
+        <button class="chip cond">+ 15분 활동으로</button>
+        <button class="chip cond">+ 준비물 없이</button>
+        <button class="chip cond">+ 우리 반 26명</button>
+        <button class="chip cond">+ 확인문제도 함께</button>
+      </div>
+      <div class="browse-row">
+        <span class="browse-label">교과서·차시로 바로 찾기</span>
+        <button class="browse-sel">초등 ▾</button>
+        <button class="browse-sel">수학 6-2 ▾</button>
+        <button class="browse-sel">2단원 6차시 ▾</button>
+        <a class="browse-go" href="lesson.html">오늘 차시 열기 ›</a>
       </div>
     </div>
 
@@ -81,7 +88,7 @@
               <h2>수업 준비 결과 미리보기</h2>
               <a class="link-more" href="#">전체 결과 보기 ›</a>
             </div>
-            <p class="sub">입력한 수업 내용에 맞춰 필요한 자료와 활동 구성을 미리 확인합니다.</p>
+            <p class="sub">YBM 교과서·지도서를 근거로 구성한 수업안과 자료를 미리 확인합니다.</p>
           </div>
           <span class="badge-time">40분 수업</span>
         </div>
@@ -113,9 +120,9 @@
             수업 흐름(요약)
           </div>
           <div class="flow-steps">
-            <div class="flow-step">도입<br>10분</div><span class="flow-arrow">›</span>
-            <div class="flow-step">전개<br>25분</div><span class="flow-arrow">›</span>
-            <div class="flow-step">활동<br>20분</div><span class="flow-arrow">›</span>
+            <div class="flow-step">도입<br>5분</div><span class="flow-arrow">›</span>
+            <div class="flow-step">전개<br>15분</div><span class="flow-arrow">›</span>
+            <div class="flow-step">활동<br>15분</div><span class="flow-arrow">›</span>
             <div class="flow-step">정리<br>5분</div>
           </div>
           <div class="flow-q">
@@ -132,6 +139,7 @@
         <!-- PPT -->
         <div class="res-card">
           <div class="res-label">수업용 PPT<span class="file-tag pptx">PPTX</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span></div>
           <div class="res-thumb ppt-thumb">
             <div class="ppt-title">쌓기도형의<br>모양과 개수</div>
             <div class="ppt-tag">초등 6학년 2학기 수학</div>
@@ -145,19 +153,21 @@
         <!-- worksheet -->
         <div class="res-card">
           <div class="res-label">학생 활동지<span class="file-tag hwpx">HWPX</span></div>
+          <div class="res-src"><span class="src-badge ai">AI 변형</span><span class="src-ref">원본 교과서 44p</span></div>
           <div class="res-thumb ws-thumb">
-            <div class="ws-title">평면, 쌓임, 위에서 본 모양</div>
+            <div class="ws-title">위, 앞, 옆에서 본 모양</div>
             <div class="ws-sub">문제를 보고 빈칸을 채워보세요.</div>
             <div class="ws-rows">
-              <div class="ws-row"><span class="ws-row-label">평면</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
-              <div class="ws-row"><span class="ws-row-label">쌓임</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
+              <div class="ws-row"><span class="ws-row-label">앞</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
               <div class="ws-row"><span class="ws-row-label">위</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
+              <div class="ws-row"><span class="ws-row-label">옆</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
             </div>
           </div>
         </div>
         <!-- quiz -->
         <div class="res-card">
           <div class="res-label">형성평가<span class="file-tag html">HTML</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">평가자료 2단원</span></div>
           <div class="res-thumb quiz-thumb">
             <div class="quiz-q">1. 쌓기나무는 모두 몇 개일까요?</div>
             <div class="quiz-opts">
@@ -167,25 +177,25 @@
             <div class="quiz-q quiz-q2">2. 앞에서 본 모양은 어느 것일까요?</div>
           </div>
         </div>
-        <!-- video -->
+        <!-- 과목 특화서비스: 독립 코너가 아니라 오늘 차시 안에서 호출 -->
         <div class="res-card">
-          <div class="res-label">수업용 동영상<span class="file-tag mp4">MP4</span></div>
+          <div class="res-label">디지털 교구관<span class="file-tag tool">수학 특화</span></div>
+          <div class="res-src"><span class="src-badge special">특화서비스</span><span class="src-ref">쌓기나무 3D 교구</span></div>
           <div class="res-thumb video-thumb">
-            <div class="video-media">
-              <span class="play-btn">
-                <svg class="svg-ico" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>
-              </span>
+            <div class="video-media tool-media">
+              <svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>
             </div>
             <div class="video-body">
-              <div class="video-src">
-                <svg class="svg-ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>
-                YouTube에서 찾은 영상
-              </div>
-              <div class="video-title">쌓기나무 이해하기</div>
-              <div class="video-tags">#쌓기나무 #도형 #시각화학습 #초등수학 #수업자료 #YBM</div>
+              <div class="video-src">오늘 차시에서 바로 실행</div>
+              <div class="video-title">쌓기나무 돌려 보기</div>
+              <div class="video-tags">위·앞·옆에서 본 모양을 화면에서 돌려 보며 확인</div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="trust-note">
+        <svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <span><b>YBM 공식</b> 자료를 먼저 추천하고, <b>AI 변형</b>은 바뀐 부분과 원본 출처를 표시합니다. 최종 확정은 선생님이 합니다.</span>
       </div>
     </div>
 
@@ -193,7 +203,7 @@
       <div class="panel qc-panel">
         <div class="qc-head">
           <h2>바로 만들기</h2>
-          <p>자주 사용하는 자료를 AI가 빠르게 만들어 드립니다.</p>
+          <p>YBM 자료를 바탕으로 AI가 빠르게 만들어 드립니다.</p>
         </div>
         <div class="qc-grid">
           <div class="qc-item"><span class="qc-icon"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span><span>생각 열기 질문</span></div>
@@ -221,30 +231,30 @@
   <!-- BOTTOM ICON NAV -->
   <section class="panel iconnav">
     <div class="iconnav-col">
-      <div class="iconnav-title">에듀테크</div>
+      <div class="iconnav-title">교과서 자료</div>
+      <div class="iconnav-items">
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/></svg></span><span>차시 자료</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/></svg></span><span>지도서</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2h6v4H9z"/><path d="M9 11h6M9 15h6"/></svg></span><span>평가 자료</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></span><span>멀티미디어</span></div>
+      </div>
+    </div>
+    <div class="iconnav-col">
+      <div class="iconnav-title">과목 특화서비스</div>
+      <div class="iconnav-items">
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/></svg></span><span>리딩 라이브러리</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></span><span>수학 교구관</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.5l6.4-.6z"/></svg></span><span>드릴 수학</span></div>
+        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>연주 피드백</span></div>
+      </div>
+    </div>
+    <div class="iconnav-col">
+      <div class="iconnav-title">수업 도구</div>
       <div class="iconnav-items">
         <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="10.5" r="1"/><circle cx="18" cy="13" r="1"/></svg></span><span>클래스게임</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></span><span>스마트노트</span></div>
         <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></span><span>탭보드</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/></svg></span><span>커넥팅북</span></div>
-      </div>
-    </div>
-    <div class="iconnav-col">
-      <div class="iconnav-title">추천 콘텐츠</div>
-      <div class="iconnav-items">
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L12 16.8 6.4 20l1.4-6.2L3 9.5l6.4-.6z"/></svg></span><span>온라인 퀴즈</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2h6v4H9z"/><path d="M9 11h6M9 15h6"/></svg></span><span>평가 자료</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg></span><span>영상 자료</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/></svg></span><span>활동지</span></div>
-      </div>
-    </div>
-    <div class="iconnav-col">
-      <div class="iconnav-title">수업 틀</div>
-      <div class="iconnav-items">
         <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9 2h6"/></svg></span><span>타이머</span></div>
         <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 012-2h13v16H6a2 2 0 00-2 2.5z"/><path d="M4 19.5A2 2 0 016 17.5h13"/><path d="M8 7l2 2 4-4"/></svg></span><span>판서</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>퀴즈</span></div>
-        <div class="iconnav-item"><span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg></span><span>라이브샷</span></div>
       </div>
     </div>
   </section>
