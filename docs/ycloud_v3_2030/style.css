@@ -264,11 +264,14 @@ html,body{overflow-x:hidden;}
 .section-lead{font-size:20px;font-weight:800;letter-spacing:-.2px;}
 
 /* ============ LESSON PLAN BIG PANEL ============ */
-.plan-card{margin-top:26px;border:1.5px solid #C7D7FF;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--blue-100);}
-.plan-card-head{padding:22px 26px 6px;}
+.plan-card{margin-top:26px;border-radius:var(--r-lg);overflow:hidden;}
+.plan-card-head{padding:22px 26px 6px;background:var(--blue-100);}
 .plan-grid{display:grid;grid-template-columns:1fr 360px;gap:0;}
-.plan-left{padding:18px 26px 24px;background:var(--blue-100);}
-.plan-right{padding:24px 24px;background:var(--blue-100);border-left:1.5px solid #C7D7FF;}
+.plan-left{padding:18px 26px 24px;background:var(--blue-100);border-bottom-right-radius:var(--r-lg);}
+.plan-right{padding:24px 24px;background:var(--blue-100);display:flex;flex-direction:column;}
+/* 꼭 짚을 포인트: 추천 수업안 묶음 밖으로 분리 (페이지 배경색) */
+.point-area{flex:1;margin:22px -24px -24px;padding:4px 24px 24px;background:var(--bg);border-top-left-radius:var(--r-lg);}
+.point-area .bar{background:var(--ink-200);}
 .plan-left .res-grid{grid-template-columns:repeat(4,1fr);}
 
 .run-box{background:var(--white);border:1px solid var(--ink-200);border-radius:var(--r-md);padding:18px 20px;}
@@ -314,7 +317,7 @@ html,body{overflow-x:hidden;}
   .nav-menu{order:3;flex-basis:100%;gap:16px;}
   .nav-right{gap:10px;}
   .hero,.result-grid,.lesson-head,.plan-grid{grid-template-columns:1fr;}
-  .plan-right{border-left:none;border-top:1.5px solid #C7D7FF;}
+  .plan-right{border-left:none;}
   .res-grid{grid-template-columns:repeat(2,1fr)!important;}
   .iconnav{grid-template-columns:1fr;gap:22px;}
   .iconnav-col{border-left:none!important;padding:0;}
