@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YBM 교사지원 사이트 · 내 홈 (로그인 후)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo-link" href="my.html"><img class="logo" src="assets/logo-ycloud.png" alt="Y클라우드" /></a>
+    <nav class="nav-menu">
+      <a href="#">초등</a><a href="#">중학</a><a href="#">고등</a><a href="#">YBM교과서 소개</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#">공지사항</a><span class="nav-sep">|</span>
+      <a href="#">고객지원</a><span class="nav-sep">|</span>
+      <span class="nav-user"><span class="nav-avatar">Y</span>YBM선생님 마이페이지</span>
+      <span class="nav-sep">|</span>
+      <a href="index.html">로그아웃</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 오늘 + 내 설정 -->
+  <section class="section my-top">
+    <div class="panel my-hero">
+      <p class="my-date">10월 21일(수) · 6학년 3반 담임</p>
+      <h1>YBM선생님, 오늘 <em>YBM 교과서 수업</em>은 3개예요.</h1>
+      <a class="my-next" href="lesson.html">
+        <span class="my-next-tag">다음 수업 · 3교시</span>
+        <b>수학 6-2 · 2단원 6차시</b>
+        <small>위에서 본 모양에 수를 써서 쌓기나무의 개수를 알아봐요 (44~45p)</small>
+        <span class="my-next-meta"><span class="src-badge official">수업안 준비됨</span><span class="src-badge ai">어제 메모 반영</span></span>
+        <span class="my-next-go">오늘 차시 열기 <svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <div class="search-bar my-search">
+        <svg class="svg-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="text" placeholder="무엇이든 물어보세요 · 예) 5교시 음악, 준비물 없이 할 리코더 활동" readonly />
+        <button class="search-go"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="panel my-settings" id="settings">
+      <div class="box-title">내 설정 <a class="my-edit" href="#">바꾸기</a></div>
+      <dl class="my-dl">
+        <div><dt>역할</dt><dd>6학년 3반 담임</dd></div>
+        <div><dt>학생 수</dt><dd>26명</dd></div>
+        <div><dt>수업 시간</dt><dd>40분</dd></div>
+      </dl>
+      <div class="my-sub">내 YBM 교과서</div>
+      <div class="my-books">
+        <span class="my-book">수학 6-2</span><span class="my-book">음악 6</span><span class="my-book">체육 6</span><span class="my-book add">+ 추가</span>
+      </div>
+      <p class="my-note">설정은 모든 화면에 그대로 유지되고, 추천 수업안에 반영돼요.</p>
+    </div>
+  </section>
+
+  <!-- 오늘 내 수업 + 이어서 하기 -->
+  <section class="section my-row">
+    <div class="panel my-card">
+      <div class="box-title">오늘 내 수업 <span class="box-sub">YBM 교과서 과목만 연결돼요</span></div>
+        <div class="my-period other">
+          <span class="my-pn">1교시</span>
+          <div class="my-pbody"><b>국어</b><small>다른 출판사 교과서</small></div>
+        </div>
+        <div class="my-period other">
+          <span class="my-pn">2교시</span>
+          <div class="my-pbody"><b>사회</b><small>다른 출판사 교과서</small></div>
+        </div>
+        <a class="my-period" href="lesson.html">
+          <span class="my-pn">3교시</span>
+          <div class="my-pbody"><b>수학 6-2</b><small>2단원 6차시 · 위에서 본 모양에 수를 써서 개수 알아보기</small></div>
+          <span class="my-st ready">준비 완료</span>
+        </a>
+        <div class="my-period other">
+          <span class="my-pn">4교시</span>
+          <div class="my-pbody"><b>과학</b><small>다른 출판사 교과서</small></div>
+        </div>
+        <a class="my-period" href="#">
+          <span class="my-pn">5교시</span>
+          <div class="my-pbody"><b>음악 6</b><small>3단원 4차시 · 리코더로 가락 연주하기</small></div>
+          <span class="my-st todo">준비하기</span>
+        </a>
+        <a class="my-period" href="#">
+          <span class="my-pn">6교시</span>
+          <div class="my-pbody"><b>체육 6</b><small>2단원 5차시 · 비 예보로 실내 대체활동 추천</small></div>
+          <span class="my-st alert">대체활동 보기</span>
+        </a>
+    </div>
+
+    <div class="panel my-card">
+      <div class="box-title">이어서 하기</div>
+      <a class="my-cont" href="assess.html">
+        <span class="my-cont-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></span>
+        <div><b>보충 결과 확인</b><small>어제 · 수학 5차시 보충자료 · 6명 중 5명 완료</small></div>
+        <span class="my-cont-go">›</span>
+      </a>
+      <a class="my-cont" href="record.html">
+        <span class="my-cont-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></span>
+        <div><b>3반 메모</b><small>어제 · “층수 세는 데 시간이 걸림, 교구관으로 먼저 보여 주기”</small></div>
+        <span class="my-cont-go">›</span>
+      </a>
+      <a class="my-cont" href="record.html">
+        <span class="my-cont-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></span>
+        <div><b>내 수정안</b><small>어제 · 수학 5차시 · 활동 시간 5분 늘림</small></div>
+        <span class="my-cont-go">›</span>
+      </a>
+      <a class="my-cont" href="#">
+        <span class="my-cont-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span>
+        <div><b>작년에서 이월된 수업안 3개</b><small>음악 6 · 3단원 리코더 수업</small></div>
+        <span class="my-cont-go">›</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 진도 + 내 과목 특화서비스 + 교과서 소식 -->
+  <section class="section my-row">
+    <div class="panel my-card">
+      <div class="box-title">진도 현황
+        <span class="my-tabs"><button class="active">과목별</button><button>반별 (전담)</button></span>
+      </div>
+          <div class="my-prog" title="수학 6-2 · 2단원 공간과 입체 · 6/9차시">
+            <div class="my-prog-top"><b>수학 6-2</b><span>2단원 공간과 입체</span><em>6/9차시</em></div>
+            <span class="as-track"><i style="width:67%"></i></span>
+          </div>
+          <div class="my-prog" title="음악 6 · 3단원 · 4/8차시">
+            <div class="my-prog-top"><b>음악 6</b><span>3단원</span><em>4/8차시</em></div>
+            <span class="as-track"><i style="width:50%"></i></span>
+          </div>
+          <div class="my-prog" title="체육 6 · 2단원 · 5/10차시">
+            <div class="my-prog-top"><b>체육 6</b><span>2단원</span><em>5/10차시</em></div>
+            <span class="as-track"><i style="width:50%"></i></span>
+          </div>
+    </div>
+
+    <div class="panel my-card">
+      <div class="box-title">내 과목 특화서비스</div>
+      <div class="my-tools">
+        <a class="my-tool" href="#"><span class="my-tool-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><b>디지털 교구관</b><small>수학</small></a>
+        <a class="my-tool" href="#"><span class="my-tool-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></span><b>드릴 수학</b><small>수학</small></a>
+        <a class="my-tool" href="#"><span class="my-tool-ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><b>AI 연주 피드백</b><small>음악 · 리코더</small></a>
+        <a class="my-tool" href="#"><span class="my-tool-ic"><svg class="svg-ico" viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 3v-6l-3-2-3 3M14 12l3 2 3-1"/></svg></span><b>MOVE PLANNER</b><small>체육</small></a>
+      </div>
+      <div class="my-sub my-news-title">내 교과서 소식</div>
+      <div class="my-news"><span class="my-tag fix">수정</span><b>수학 6-2 · 2단원 PPT 오류 수정</b><small>10/18</small></div>
+      <div class="my-news"><span class="my-tag new">추가</span><b>음악 6 · 리코더 반주 음원</b><small>10/15</small></div>
+      <div class="my-news"><span class="my-tag new">추가</span><b>체육 6 · 실내 대체활동 3종</b><small>10/14</small></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <img class="footer-logo" src="assets/logo-ybm.png" alt="YBM" />
+      <nav class="footer-links">
+        <a href="#">회사소개</a><a href="#">이용약관</a><a href="#">개인정보처리방침</a><a href="#">회사주소</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="contact">
+        <span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 002 2h1v-6H3z"/></svg></span>
+        <div class="contact-text">교과서 및 자료 이용 문의<br><b>02-2000-0509</b> <a href="#">[1:1 문의]</a></div>
+      </div>
+      <div class="contact">
+        <span class="ic"><svg class="svg-ico" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1v-6h3z"/><path d="M3 19a2 2 0 002 2h1v-6H3z"/></svg></span>
+        <div class="contact-text">AI 디지털 교육자료 공동 CS센터<br><b>1661-0777</b> <a href="#">[1:1 문의]</a></div>
+      </div>
+      <div class="footer-btns">
+        <button class="btn-outline">자주 묻는 질문</button>
+        <button class="btn-fill">원격지원</button>
+      </div>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
