@@ -851,3 +851,9 @@ body.cast{justify-content:center;align-items:center;padding:2vh 2vw;background:#
 .ai-edit-bar{margin-top:14px;border:1.5px solid var(--ink-200);box-shadow:none;}
 .ai-edit-chips{margin-top:12px;}
 .ai-edit-chips .chip{font-size:14.5px;padding:7px 14px;}
+
+/* AI로 바꾼 결과 (검색창 클릭 시 펼침) */
+.ai-edit-bar{cursor:pointer;}
+.ai-edit-bar input{cursor:pointer;}
+.ai-result{scroll-margin-top:16px;animation:aiIn .35s ease;}
+@keyframes aiIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}

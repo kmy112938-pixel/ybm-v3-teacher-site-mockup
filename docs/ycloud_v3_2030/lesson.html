@@ -285,7 +285,7 @@
       </div>
       <div class="search-bar ai-edit-bar">
         <svg class="svg-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" value="준비물 없이 15분 안에 할 수 있는 활동으로 바꿔줘" readonly />
+        <input type="text" value="준비물 없이 15분 안에 할 수 있는 활동으로 바꿔줘" readonly aria-controls="ai-result" />
         <button class="search-go">
           <svg class="svg-ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </button>
@@ -293,6 +293,86 @@
       <div class="chip-row ai-edit-chips"><span class="chip-label">바로 만들기</span><button class="chip">확인문제 만들기</button><button class="chip">수준별 보충자료</button><button class="chip">활동지 변형하기</button><button class="chip">문제 변형하기</button><button class="chip">발문 추천</button><button class="chip">단원 정리 활동</button></div>
     </div>
   </section>
+
+  <!-- AI로 바꾼 결과: 검색창을 누르면 펼쳐짐 -->
+  <div class="ai-result" id="ai-result" hidden>
+  <div class="results-lead"><h2>조건을 바꿔 다시 요청한 결과</h2></div>
+
+  <!-- SEARCH RESULTS + SIDE -->
+  <section class="result-grid" style="margin-top:14px;">
+    <div class="panel preview-main" style="padding:22px 24px;">
+      <div class="res-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="res-card">
+          <div class="res-label">수업용 PPT<span class="file-tag pptx">PPTX</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">교과서 44~45p</span></div>
+          <div class="res-thumb ppt-thumb">
+            <div class="ppt-title">쌓기 도형의<br>모양과 개수</div>
+            <div class="ppt-tag">초등 6학년 수학</div>
+            <div class="cube-stack">
+              <div class="cube c1"></div><div class="cube c2"></div><div class="cube empty"></div><div class="cube empty"></div><div class="cube empty"></div>
+              <div class="cube c3"></div><div class="cube c1"></div><div class="cube c2"></div><div class="cube empty"></div><div class="cube empty"></div>
+              <div class="cube c4"></div><div class="cube c5"></div><div class="cube c3"></div><div class="cube c1"></div><div class="cube empty"></div>
+            </div>
+          </div>
+        </div>
+        <div class="res-card">
+          <div class="res-label">학생 활동지<span class="file-tag hwpx">HWPX</span></div>
+          <div class="res-src"><span class="src-badge ai">AI 변형</span><span class="src-ref">원본 교과서 44p</span></div>
+          <div class="res-thumb ws-thumb">
+            <div class="ws-title">위, 앞, 옆에서 본 모양</div>
+            <div class="ws-sub">문제를 보고 빈칸을 채워보세요.</div>
+            <div class="ws-rows">
+              <div class="ws-row"><span class="ws-row-label">앞</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
+              <div class="ws-row"><span class="ws-row-label">위</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
+              <div class="ws-row"><span class="ws-row-label">옆</span><div class="ws-cells"><div class="ws-cell"></div><div class="ws-cell"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="res-card">
+          <div class="res-label">형성평가<span class="file-tag html">HTML</span></div>
+          <div class="res-src"><span class="src-badge official">YBM 공식</span><span class="src-ref">평가자료 2단원</span></div>
+          <div class="res-thumb quiz-thumb">
+            <div class="quiz-q">1. 쌓기나무는 모두 몇 개일까요?</div>
+            <div class="quiz-opts">
+              <div class="quiz-opt">① 6개</div><div class="quiz-opt">② 9개</div>
+              <div class="quiz-opt">③ 10개</div><div class="quiz-opt">④ 11개</div>
+            </div>
+            <div class="quiz-q quiz-q2">2. 앞에서 본 모양은 어느 것일까요?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-stack">
+      <div class="panel prompt-panel">
+        <div class="prompt-head">
+          <h2>추천 프롬프트</h2>
+          <a class="prompt-more" href="#">더보기 ›</a>
+        </div>
+        <div class="prompt-list">
+          <div class="prompt-item"><span class="prompt-num">1</span><p><b>수업 직전</b> · 준비물 없이 바로 할 활동</p></div>
+          <div class="prompt-item"><span class="prompt-num">2</span><p><b>수업 중</b> · 이해 못한 학생에게 쉽게 설명</p></div>
+          <div class="prompt-item"><span class="prompt-num">3</span><p><b>수업 후</b> · 확인문제와 보충자료 만들기</p></div>
+        </div>
+        <div class="prompt-dots"><span class="dots"><i class="active"></i><i></i><i></i></span></div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+  <script>
+  (function () {
+    var bar = document.querySelector('.ai-edit-bar'), out = document.getElementById('ai-result');
+    if (!bar || !out) return;
+    function show() {
+      if (!out.hidden) return;
+      out.hidden = false;
+      out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    bar.addEventListener('click', show);
+    bar.querySelector('input').addEventListener('keydown', function (e) { if (e.key === 'Enter') show(); });
+  })();
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer">
