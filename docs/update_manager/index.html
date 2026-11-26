@@ -2445,7 +2445,7 @@ async function onTask(id) {
     if (ask && !confirm(`${t.textbook}\n${ask}`)) { S.lastLabel = null; S.lastButton = null; S.lastOrg = null; return; }
     const undoable = ['deliver', 'stage', 'prod'].includes(t.kind);
     const r = await doAct({ ...direct, jobId: t.jobId, expect: t.target?.expect });
-    if (r && undoable) undoToast([t.textbook, t.button, (r.message.match(/다음: .+$/) || [])[0]].filter(Boolean).join(' · '), { type: 'undo', what: t.kind, jobId: t.jobId, ...(t.kind === 'stage' ? { content: t.content, expect: t.target?.expect } : {}) }, t.orgs[0]);
+    if (r && undoable) undoToast(doneMsg(r, direct), { type: 'undo', what: t.kind, jobId: t.jobId, ...(t.kind === 'stage' ? { content: t.content, expect: t.target?.expect } : {}) }, t.orgs[0]);
     return;
   }
   S.open = id; S.panelHtml = null; redraw();
@@ -2456,6 +2456,19 @@ async function onTask(id) {
   const f = $('#panel input:not([type=radio]):not([type=checkbox]), #panel textarea'); if (f && t.kind !== 'review') f.focus();
 }
 const doAct = (action) => doPost('/api/act', { action });
+// 처리 알림: '교과서 · 무엇을 했는지 완료'. 다음 할 일은 메인에서만(교과서 화면에는 이미 보임)
+function doneMsg(r, a) {
+  const what = ({
+    deliver: '수정 이북 업체 전달', stage: `${CL[a.content] || ''} 테스트 서버 업로드`, prod: '운영 서버 반영', prodConfirm: '운영 반영 결과 확인',
+    jsonAdd: 'bookUpdate.json 항목 추가', jsonDeploy: 'bookUpdate.json 서버 반영', finalize: '최종 확정', sizeAck: '용량 감소 확인',
+    cumulative: '이전 수정 내용 확인', testUpload: `${CL[a.content] || ''} 파일 올림`,
+    review: `${Object.keys(a.results || {}).map((c) => CL[c]).join('·')} 검수`,
+  })[a.type];
+  const title = jobRow(r.jobId)?.title;
+  if (!what || !title) return r.message || '처리되었습니다';
+  const next = pathOf() === '/job/' + r.jobId ? '' : (r.message.match(/다음: .+$/) || (/작업 완료/.test(r.message) ? ['작업 완료'] : []))[0];
+  return [title, what + ' 완료', next].filter(Boolean).join(' · ');
+}
 // 빠진 항목: 안내를 띄우고 그 자리로 이동해 빨간 테두리로 표시(고치면 사라짐)
 function failAt(el, msg) {
   toast(msg, true);
@@ -2470,7 +2483,7 @@ async function doPost(url, body) {
   try {
     const r = await post(url, body); S.open = null;
     const inlineStage = body.action?.type === 'stage' && pathOf() === '/job/' + r.jobId;
-    if (!inlineStage) toast(r.message || '처리되었습니다');
+    if (!inlineStage) toast(body.action ? doneMsg(r, body.action) : r.message || '처리되었습니다');
     // 작업 화면에서 처리했으면 '방금 처리한 작업 · 다음 담당'을 업무 칸 위에 표시
     const lab = S.lastLabel, button = S.lastButton, org = S.lastOrg;
     S.lastLabel = null; S.lastButton = null; S.lastOrg = null;
