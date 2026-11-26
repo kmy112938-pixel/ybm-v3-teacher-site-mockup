@@ -1582,7 +1582,7 @@ function nextVersion(db, tb) {
   return 'V' + (used.length ? Math.max(...used) + 1 : 1);
 }
 function createJob(db, ctx, input) {
-  if (ctx.actor?.org !== 'AI랩') throw new UserError('AI랩만 수정을 시작할 수 있습니다');
+  if (!['편집팀', 'AI랩'].includes(ctx.actor?.org)) throw new UserError('편집팀과 AI랩만 수정을 시작할 수 있습니다');
   if (input.kind === '수정' && !(input.newItems || []).some((x) => String(x).trim())) throw new UserError('이번 수정 사항을 입력하세요', { field: 'items' });
   let tb = input.textbookId ? db.textbooks.find((x) => x.id === input.textbookId) : null;
   let created = false;
@@ -1784,7 +1784,7 @@ function act(db, ctx, a) {
     }
     // 수정 범위 변경: 파일 등록·전달·반영·검수 등 처리가 시작되기 전까지만
     case 'setTargets': {
-      if (ctx.actor?.org !== 'AI랩') throw new UserError('AI랩만 수정 범위를 바꿀 수 있습니다');
+      if (!['편집팀', 'AI랩'].includes(ctx.actor?.org)) throw new UserError('편집팀과 AI랩만 수정 범위를 바꿀 수 있습니다');
       if (job.closedAt || jobHasProgress(db, job)) throw new UserError('이미 작업이 진행되어 수정 범위를 바꿀 수 없습니다');
       const t = normalizeTargets(a.targets);
       if (!CONTENTS.some((c) => t[c])) throw new UserError('수정 대상을 선택하세요', { field: 'targets' });
@@ -3176,8 +3176,8 @@ const INFO_NAME = { author: '저자', curriculum: '개정 시기', vendor: '전�
 const canDelMemo = (c) => S.admin.ok || (!!S.org && isMine(c.org));
 // 업체(스퀘어네트·블루가)는 교과서 정보를 고치지 않음
 const VENDORS = ['스퀘어네트', '블루가 이북', '블루가 커넥팅북'];
-// 수정 시작·범위 변경은 AI랩만
-const canStart = () => S.org === 'AI랩';
+// 수정 시작·범위 변경은 편집팀(과목 담당 포함)과 AI랩만
+const canStart = () => S.org === 'AI랩' || String(S.org || '').startsWith('편집팀');
 const canEditInfo = () => S.admin.ok || !VENDORS.includes(S.org);
 async function sendMemo(text, org) {
   if (!ORGS.includes(org)) return toast('소속 조직을 선택하세요', true);
@@ -3287,7 +3287,7 @@ async function submitNew() {
     targets: { ebook: eb, digital: eb || !!n.targets.digital, connecting: eb || !!n.targets.connecting },
     assignee: n.assignee, newItems: (n.items || '').split('\n'),
   };
-  S.actOrg = S.org;
+  S.actOrg = String(S.org || '').startsWith('편집팀') ? '편집팀' : S.org;
   try {
     const r = await post('/api/jobs', { input });
     S.nt = null; S.flash = { jobId: r.jobId, label: '이번 수정 시작', next: (r.message.match(/다음: (.+)$/) || [])[1] || '' };
@@ -3475,7 +3475,7 @@ document.addEventListener('submit', async (e) => {
     const items = (fd.get('items') || '').split('\n');
     if (S.detail.job.kind === '수정' && !items.some((x) => x.trim())) { S.scopeErr = '이번 수정 사항을 입력하세요'; return drawJob(); }
     return needName(async () => {
-      S.actOrg = S.org;
+      S.actOrg = String(S.org || '').startsWith('편집팀') ? '편집팀' : S.org;
       try { await post('/api/act', { action: { type: 'setTargets', jobId, targets: { ebook: !!se.ebook, digital: !!se.ebook || !!se.digital, connecting: !!se.ebook || !!se.connecting }, items } }); S.scopeEdit = null; S.scopeErr = null; S.flash = null; toast('수정 범위 변경됨'); await rerender(); }
       catch (er) { S.scopeErr = er.message; drawJob(); }
     });
